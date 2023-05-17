@@ -8,7 +8,7 @@ public class OperatorPractice {
 		OperatorPractice o = new OperatorPractice();
 //		o.method1();
 //		o.method2();
-		o.method3();
+//		o.method3();
 //		o.method4();
 //		o.method5();
 //		o.method6();
@@ -27,20 +27,22 @@ public class OperatorPractice {
 		System.out.print("연필 개수 : ");
 		b = sc.nextInt();
 		
-		int c = b /= a;
-		System.out.println("1인당 연필 개수 : " + c);
+		System.out.println("1인당 연필 개수 : " + b/a);
 		
-		int d = b %= a;
-		// System.out.println("남은 연필 개수 : " + d);
+		System.out.println("남은 연필 개수 : " + b%a);
 		
 	}
 	
 	public void method2() {
 		Scanner sc = new Scanner(System.in);
 		
-		//
-		System.out.print("양수를 입력해주세요 > ");
+		int a = 0;
 		
+		System.out.print("양수를 입력해주세요 > ");
+		a = sc.nextInt();
+		
+		// 슨생님.. 단순하게 생각하니까 답이 나오긴한대 맞는 코드인가용 흡..!
+		System.out.println(a/100*100);
 		
 		
 	}
@@ -51,6 +53,7 @@ public class OperatorPractice {
 		int a = 0;
 		int b = 0;
 		int c = 0;
+		boolean result = false;
 		
 		System.out.print("입력 1 : ");
 		a = sc.nextInt();
@@ -61,7 +64,8 @@ public class OperatorPractice {
 		System.out.print("입력 3 : ");
 		c = sc.nextInt();
 		
-		System.out.println(a=b=c));
+		result = (a == b) && (b == c);
+		System.out.println(result);
 
 	}
 	
@@ -99,7 +103,6 @@ public class OperatorPractice {
 		
 		int ap = 0;
 		int bk = 0;
-		String result = 0;
 		
 		System.out.print("사과의 개수 : ");
 		ap = sc.nextInt();
@@ -107,8 +110,8 @@ public class OperatorPractice {
 		System.out.print("바구니의 크기 : ");
 		bk = sc.nextInt();
 		
-		result = ap 
-				
-		System.out.println("필요한 바구니의 수 : " +  result);
+		int n = ap / bk + ((ap % bk == 0)? 0 : 1);
+		
+	System.out.println("필요한 바구니의 수 : " + n);
 	}
 }
