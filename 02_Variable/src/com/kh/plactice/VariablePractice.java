@@ -11,7 +11,7 @@ public class VariablePractice {
 	public static void main(String[] args) {
 		
 		VariablePractice v = new VariablePractice();
-		v.method1();
+//		v.method1();
 		v.method2();
 		v.method3();
 		v.method4();
@@ -48,6 +48,8 @@ public class VariablePractice {
 	}
 	
 	public void method3 () {
+		System.out.println();
+		
 		int x = 5;
 		int y = 7;
 		int z = 9;
