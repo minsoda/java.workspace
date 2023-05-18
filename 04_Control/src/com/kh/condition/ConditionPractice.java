@@ -12,8 +12,8 @@ public class ConditionPractice {
 			
 //			ap.practice1();
 //			ap.practice2();
-//			ap.practice3();
-			ap.practice4();
+			ap.practice3();
+//			ap.practice4();
 //			ap.practice5();
 //			ap.practice6();
 //			ap.practice7();
@@ -37,7 +37,9 @@ public class ConditionPractice {
     	
     	if(num %2 == 0) {
     		System.out.println("짝수다");
-    	} else {
+    	} if(num <= 0){
+    		System.out.println("양수만 입력해주세요.");
+    	}else {
     		System.out.println("홀수다");
     	}
     	
@@ -87,8 +89,15 @@ public class ConditionPractice {
         
         System.out.print("피자 먹는 사람 수 : ");
         int p = sc.nextInt();
+         
+        int m = (p / n); 
         
-        
+        if(p % n == 0){
+        	System.out.println(m);
+        }else {
+        	System.out.println(m + 1);
+        }
+  
     	
     }
 
@@ -159,8 +168,14 @@ public class ConditionPractice {
     	System.out.print("구매한 옷 가격 : ");
     	int price = sc.nextInt();
     	
-    	if(price<=100000) {
+    	if(price <= 100000) {
+    		System.out.println(((int)(price * 0.95)));
     		
+    	}else if(price <= 300000) {
+    		System.out.println(((int) (price * 0.9)));
+    	
+    	}else if(price <= 500000) {
+    		System.out.println(((int) (price * 0.8)));
     	}
     }
 
@@ -170,7 +185,18 @@ public class ConditionPractice {
         입력받은 각에 따라 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 출력하세요.
      */
     public void practice6() {
-
+    	System.out.print("각도를 입력 해주세요 : ");
+    	int g = sc.nextInt();
+    	
+    	if(g < 90) {
+    		System.out.println("1");
+    	}else if(g == 90) {
+    		System.out.println("2");
+    	}else if(g < 180) {
+    		System.out.println("3");
+    	}else if(g == 180) {
+    		System.out.println("4");
+    	}
     }
 
 
@@ -193,7 +219,27 @@ public class ConditionPractice {
       아이디가 틀렸습니다.
     */
     public void practice7() {
- 
+    	
+    	String id = "";
+    	String pw = "";
+    	
+    	System.out.print("아이디 : ");
+    	id = sc.nextLine();
+    	
+    	System.out.print("비밀번호 : ");
+    	pw =sc.nextLine();
+    	 	
+    	if("happy".equals(id)) {
+    	}else {
+    		System.out.println("아이디가 틀렸습니다.");
+    	}
+    	if("1234".equals(pw)) {
+    	}else{
+    		System.out.println("비밀번호가 틀렸습니다.");
+    	}
+    	if("happy".equals(id) && "1234".equals(pw)) {
+    		System.out.println("로그인 성공!");
+    	}
     }
 
     /*

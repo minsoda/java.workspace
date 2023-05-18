@@ -264,13 +264,13 @@ public class A_If {
 		A_If a = new A_If();
 //		a.method1();
 //		a.method2();
-//		a.method3();
+		a.method3();
 //		a.method4();
 //		a.method5();
 //		a.method6();
 		
 //		a.practice1();
-		a.practice2();
+//		a.practice2();
 		
 	}
 }
