@@ -41,7 +41,7 @@ public class OperatorPractice {
 		System.out.print("양수를 입력해주세요 > ");
 		a = sc.nextInt();
 		
-		// 슨생님.. 단순하게 생각하니까 답이 나오긴한대 맞는 코드인가용 흡..!
+		
 		System.out.println(a/100*100);
 		
 		
@@ -71,13 +71,11 @@ public class OperatorPractice {
 	
 	public void method4() {
 		Scanner sc = new Scanner(System.in);
-		int num1 = 0;
-		String result = null;
 				
 		System.out.print("정수 : ");
-		num1 = sc.nextInt();
+		int num1 = sc.nextInt();
 		
-		result = (num1 /2 == 0)? "짝수다" : "홀수다";
+		String result = (num1 % 2 == 0)? "짝수다" : "홀수다";
 		System.out.println(result);
 		
 	
@@ -93,7 +91,7 @@ public class OperatorPractice {
 		System.out.print("나이 : ");
 		age = sc.nextInt();
 		
-		result = (age <=13)?  "어린이" : ((age<19)? "청소년" : "성인");
+		result = (age <=13)?  "어린이" : ((age<=19)? "청소년" : "성인");
 		System.out.println(result);
 		
 	}
