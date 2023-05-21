@@ -134,7 +134,7 @@ public class C_For {
 			for(int i=1; i<=num; i++) {
 				sum +=i;
 			}
-			System.out.println("1부터" + random + "까지의 합계 : " + sum);
+			System.out.println("1부터" + num + "까지의 합계 : " + sum);
 		}
 		
 		/*
@@ -316,7 +316,7 @@ public class C_For {
 //				c.method4();
 //				c.method5();
 //				c.method6();
-//				c.method7();
+				c.method7();
 //				c.method8();
 //				c.method9();
 //				c.method10();
@@ -325,7 +325,7 @@ public class C_For {
 //				c.method13();
 //				c.method14();
 //				c.method15();
-				c.method16();
+//				c.method16();
 		
 		
 	}

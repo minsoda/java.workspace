@@ -115,10 +115,10 @@ public class D_While {
 	 * */
 	public void method5() {
 		
+		System.out.print("1과 100사이의 값 입력 > ");
 		int answer = (int)(Math.random()*100) +1;
 		int a = 0;
 		
-		System.out.print("1과 100사이의 값 입력 > ");
 		while (true) {
 			int b = sc.nextInt();
 			a++;

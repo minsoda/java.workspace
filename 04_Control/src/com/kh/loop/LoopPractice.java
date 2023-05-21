@@ -13,9 +13,9 @@ class LoopPractice {
 //		lp.method1();
 //		lp.method2();
 //		lp.method3();
-//		lp.method4();
+		lp.method4();
 //		lp.method5();
-		lp.method6();
+//		lp.method6();
 			
 	}
  
@@ -98,20 +98,21 @@ class LoopPractice {
         0
      */
     public void method4() { 
-    	//ㅠㅠㅠㅠ 왜 자꾸 ㅠㅠㅠ 무한루프 되는걸까요 ㅠㅠㅠㅠㅠㅠ흐엉엉
     	
     	System.out.print("0이 나올때까지 숫자를 출력하시오. : ");
     	int a = sc.nextInt();
     	
+    	int b;
     	while(true) {
-    		a = (int)(Math.random()*10) +1;
-    		System.out.println(a);
-
-    		if(a == 0) {
+    		b = (int)(Math.random()*10);
+    		System.out.println(b);
+    		if(b == 0) {
     			break;
+    		}
+    		
     	}
     	}
-    }
+ 
 
     /*
         주사위를 10번 굴렸을 때 각 눈의 수가 몇 번 나왔는지 출력하세요. (random 사용!)
