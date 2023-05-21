@@ -69,7 +69,7 @@ public class F_Triple {
 		System.out.println(result);
 	
 		
-	
+	}
 	
 	public void practice2() {
 	/*

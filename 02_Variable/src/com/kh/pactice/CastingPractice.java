@@ -1,4 +1,4 @@
-package com.kh.plactice;
+package com.kh.pactice;
 
 import java.util.Scanner;
 
@@ -7,8 +7,8 @@ public class CastingPractice {
 	public static void main(String[] args) {
 	
 	CastingPractice cp = new CastingPractice();
-	//cp.method1();
-	cp.method2();
+//		cp.method1();
+		cp.method2();
 	}
 	
 	public void method1() {
@@ -37,9 +37,10 @@ public class CastingPractice {
 		System.out.print("수학 : ");
 		int m = sc.nextInt();
 		
+		int sum = k+e+m;
 		float av = ((float)(k+e+m))/3;
 		
-		System.out.println("총점 : " + (k+e+m));
+		System.out.println("총점 : " + sum );
 		System.out.printf("평균 : %.2f", av);
 		
 	}

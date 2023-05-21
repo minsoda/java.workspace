@@ -149,7 +149,7 @@ public class C_For {
 			String a = "Hello";
 			
 			int i = 0;
-			char b =a.charAt(i);
+			char b = a.charAt(i);
 					
 			for(i=0; i<=4; i++) {
 			System.out.println(a.charAt(i));
@@ -170,6 +170,7 @@ public class C_For {
 			 * */
 
 			System.out.println("문자열의 길이 :  " + str.length());
+			
 			for(int i=0; i<=str.length()-1; i++){ //(int i=0; i<str.length(); i++)
 				System.out.println(str.charAt(i));
 			}

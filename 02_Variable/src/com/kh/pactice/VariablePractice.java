@@ -1,4 +1,4 @@
-package com.kh.plactice;
+package com.kh.pactice;
 
 import java.util.Scanner;
 
@@ -54,7 +54,12 @@ public class VariablePractice {
 		int y = 7;
 		int z = 9;
 		
-		int a = 0;
+		int a;
+		
+		a = x;
+		x = y;
+		y = z;
+		z = a;
 		
 		System.out.println("x=" + x);
 		System.out.println("y=" + y);
@@ -70,7 +75,7 @@ public class VariablePractice {
 		String a = sc.next();
 		
 		System.out.println("첫번째 문자 : " + a.charAt(0));
-		System.out.println("마지막 문자 : " + a.charAt(7));
+		System.out.println("마지막 문자 : " + a.charAt(a.length()-1));
 		
 	}
 }

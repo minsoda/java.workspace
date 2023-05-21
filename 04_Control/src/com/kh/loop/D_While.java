@@ -115,22 +115,27 @@ public class D_While {
 	 * */
 	public void method5() {
 		
-		while(true) {
-		System.out.print("1과 100 사이의 값을 입력 > ");
-		int num = sc.nextInt();
-		double random = Math.random() * 100 +1;
-		int
-			for(int i=1; ; i++) {
-				if(num < random ) {
-					System.out.println("더 큰 수를 입력하세요.");
-				}else if(num > random) {
-				System.out.println(num + "더 작은 수를 입력하세요.");
-			}else if(num == random) {
-				System.out.println(num +" 번 만에 맞췄습니다.");
-			}break;
+		int answer = (int)(Math.random()*100) +1;
+		int a = 0;
+		
+		System.out.print("1과 100사이의 값 입력 > ");
+		while (true) {
+			int b = sc.nextInt();
+			a++;
+			
+			if(b < answer) {
+				System.out.println("더 큰 수를 입력하세요.");
+			} else if ( b > answer) {
+				System.out.println("더 작은 수를 입력하세요.");
+			} else {
+				System.out.println(a + "번 만에 맞췄습니다.");
+				break;
 			}
 		}
 	}
+	
+		
+	
 	
 	public static void main(String[] args) {
 		D_While d = new D_While();

@@ -16,11 +16,11 @@ public class ConditionPractice {
 //			ap.practice4();
 //			ap.practice5();
 //			ap.practice6();
-			ap.practice7();
+//			ap.practice7();
 //			ap.practice8();
 //			ap.practice9();
 //			ap.practice10();
-//			ap.practice11();
+			ap.practice11();
 		}
     /*
        키보드로 정수를 입력 받은 정수가 양수이면서 짝수일 때만 “짝수다”를 출력하고
@@ -62,7 +62,6 @@ public class ConditionPractice {
     	int num1 = sc.nextInt();
     	
     	System.out.print("num2 : ");
-
     	int num2 = sc.nextInt();
     	
     	if(num1 == num2) {
@@ -133,27 +132,22 @@ public class ConditionPractice {
     	
     	System.out.print("영어 점수 : ");
     	int e = sc.nextInt();
-
-    	float avg = (k+m+e)/3;
     	
-    	if(k <= 40 && avg <=60) {
+    	int sum = k + m + e;
+    	double avg = sum / 3.0;
+    	
+    	
+		
+    	if(k >= 40 && m >= 40 && e >= 40 && avg >= 60) {
+    		System.out.println("국어 점수 : " + k);
+    		System.out.println("수학 점수 : " + m);
+    		System.out.println("영어 점수 : " + e);
+    		System.out.println("총접 : " + sum);
+    		System.out.println("평균 : " + avg);
     		System.out.println("축하합니다, 합격입니다!");
     	} else {
     		System.out.println("불합격입니다.");
     	}
-    	
-    	if(m <= 40 && avg <=60) {
-    		System.out.println("축하합니다, 합격입니다!");
-    	}else {
-    		System.out.println("불합격입니다.");
-    	}
-    	
-    	if(e <= 40 && avg <=60) {
-    		System.out.println("축하합니다, 합격입니다!");
-    	}else {
-    		System.out.println("불합격입니다.");
-    	}
-    
     }
 
     /*
@@ -167,16 +161,21 @@ public class ConditionPractice {
 
     	System.out.print("구매한 옷 가격 : ");
     	int price = sc.nextInt();
+    	double discount = 0.0;
     	
-    	if(price <= 100000) {
-    		System.out.println(((int)(price * 0.95)));
+    	
+    	if(price >= 500000) {
+    		discount = 0.2;
     		
-    	}else if(price <= 300000) {
-    		System.out.println(((int) (price * 0.9)));
+    	}else if(price >= 300000) {
+    		discount = 0.1;
     	
-    	}else if(price <= 500000) {
-    		System.out.println(((int) (price * 0.8)));
+    	}else if(price >= 100000) {
+    		discount = 0.05;
     	}
+    	
+    	int pay = (int)((price-(price * discount)));
+    	System.out.println(pay);
     }
 
 
@@ -220,27 +219,25 @@ public class ConditionPractice {
     */
     public void practice7() {
     	
-    	String id = "";
-    	String pw = "";
+    	String id = "happy";
+    	String pw = "1234";
     	
     	System.out.print("아이디 : ");
-    	id = sc.nextLine();
+    	String enterid = sc.nextLine();
     	
     	System.out.print("비밀번호 : ");
-    	pw =sc.nextLine();
+    	String enterpw =sc.nextLine();
     	 	
-    	if("happy".equals(id)) {
-    	}else {
+    	if(enterid.equals(id) && enterpw.equals(pw)) {
+    		System.out.println("로그인 성공!");
+    	}else if(!enterid.equals(id)){
     		System.out.println("아이디가 틀렸습니다.");
-    	}
-    	if("1234".equals(pw)) {
-    	}else{
+    	}else {
     		System.out.println("비밀번호가 틀렸습니다.");
     	}
-    	if("happy".equals(id) && "1234".equals(pw)) {
-    		System.out.println("로그인 성공!");
-    	}
+    	
     }
+
 
     /*
         키, 몸무게를 double로 입력 받고 BMI지수를 계산하여 계산 결과에 따라
@@ -256,8 +253,30 @@ public class ConditionPractice {
         저체중
 
      */
+    
     public void practice8() {
     	
+    	System.out.print("키(m)를 입력해 주세요 : ");
+    	double m = sc.nextDouble();
+    	
+    	System.out.print("몸무게(kg)를 입력해 주세요 : ");
+    	double kg = sc.nextDouble();
+    	
+    	
+    	double bmi = kg / (m * m);
+    	System.out.println("BMI 지수 : " + bmi);
+    	
+    	if(bmi >= 30) {
+    		System.out.println("고도 비만");
+    	}else if (bmi >= 25) {
+    		System.out.println("비만");
+    	}else if (bmi >= 23) {
+    		System.out.println("과체중");
+    	}else if (bmi >= 18.5) {
+    		System.out.println("정상 체중");
+    	}else {
+    		System.out.println("저 체중");
+    	}
     	
        
     }
@@ -273,10 +292,44 @@ public class ConditionPractice {
         15 / 4 = 3
 
      */
+    
     public void practice9() {
-
-    }
-
+    	System.out.print("피연산자1 입력 : ");
+    	int p1 = sc.nextInt();
+    	
+    	System.out.print("피연산자2 입력 : ");
+    	int p2 = sc.nextInt();
+    	
+    	sc.nextLine();
+    	
+    	if (p1 < 0 || p2 < 0) {System.out.println("잘못입력하셨습니다. 프로그램을 종료합니다.");
+    	return;
+    	}
+    	
+    	System.out.print("연산자를 입력(+,-,*,/,%) : ");
+    	String y = sc.nextLine();
+    	
+    	
+    	switch(y){
+    		case "+" : System.out.println(p1 + " + " + p2 + " = " + (p1 + p2));
+    		break;
+    		
+    		case "-" : System.out.println(p1 + " - " + p2 + " = " + (p1 - p2));
+    		break;
+    		
+    		case "*" : System.out.println(p1 + " * " + p2 + " = " + (p1 * p2));
+    		break;
+    		
+    		case "/" : System.out.println(p1 + " / " + p2 + " = " + (p1 / p2));
+    		break;
+    		
+    		case "%" : System.out.println(p1 + " % " + p2 + " = " + (p1 % p2));
+    		break;
+    		default : System.out.println("잘못입력하셨습니다. 프로그램을 종료합니다.");
+    	
+    	}
+	}
+	
     /*
       아래 예시와 같이 메뉴를 출력하고 메뉴 번호를 누르면 “OO메뉴입니다“를,
       종료 번호를 누르면 “프로그램이 종료됩니다.”를 출력하세요
@@ -289,6 +342,7 @@ public class ConditionPractice {
         메뉴 번호를 입력하세요 : 3
         조회 메뉴입니다.
      */
+    
     public void practice10() {
     		
     	System.out.println("1. 입력");
@@ -316,6 +370,7 @@ public class ConditionPractice {
     	
     }
 
+    
     /*
         중간고사, 기말고사, 과제점수, 출석회수를 입력하고 Pass 또는 Fail을 출력하세요.
         총 점 100점 중 배점으로는 다음과 같다.
@@ -362,24 +417,58 @@ public class ConditionPractice {
         FAIL [점수 미달] (총점 66.0)
 
      */
+    
     public void practice11() {
         
     	System.out.print("중간 고사 점수  : ");
+    	int num1 = sc.nextInt();
+    	
     	System.out.print("기말 고사 점수  : ");
+    	int num2 = sc.nextInt();
+    	
     	System.out.print("과제 점수  : ");
+    	int num3 = sc.nextInt();
+    	
     	System.out.print("출석 회수  : ");
-    	System.out.print("=====결과=====");
+    	int ch = sc.nextInt();
     	
-    	int num = sc.nextInt();
+    	System.out.println("=======결과=======");
     	
-    	int a = 0;
-    	int b = 0;
-    	int p = 0;
-    	int c = 0;
+    	double a = num1 * 0.2;
+    	double b = num2 * 0.3;
+    	double c = num3 * 0.3;
+    	double result = a+b+c + ch;
     	
-    	int a = a/100)*100
+    	// ㅠㅠㅠㅠㅠㅠ fail일때 왜 왜왜왜왜왜 ㅠㅠㅠㅠ 계속 나머지도 출력이 되는걸까용 ㅠ
     	
+    		if(num1 >= 0) {
+        		System.out.println("중간 고사 점수(20) : " + (num1*0.2));
+        	}if(num2 >= 0) {
+        		System.out.println("기말 고사 점수 (30) : " + (num2*0.3));
+        	}if(num3 >= 0) {
+        		System.out.println("과제 점수 (30) : " + (num3*0.3));
+        	}if(ch >= 0) {
+        		System.out.println("출석 점수 (20) : " + ch);
+        		System.out.println("총점 : " + result);
+        		
+        		if(result >= 70 && ch >= 14) {
+            		System.out.println("PASS");
+        	}else {
+    		
+        		if (result < 70) {
+        			System.out.println("FAIL" + "[점수 미달] (총점 " + result + ")");
+        		}
+        		if (ch < 14) {
+        			System.out.println("FAIL [출석 횟수 부족] (" + ch + "/" + 20 + ")");
+        		}
+        	}
     	
+    	}
     }
-    
 }
+
+    	
+    	
+    
+   
+    
