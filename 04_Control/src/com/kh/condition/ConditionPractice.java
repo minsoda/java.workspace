@@ -35,10 +35,10 @@ public class ConditionPractice {
     	System.out.print("숫자를 한 개 입력하세요 : ");
     	int num = sc.nextInt();
     	
-    	if(num %2 == 0) {
+    	if(num %2 == 0 && num >= 0 ) {
     		System.out.println("짝수다");
-    	} if(num <= 0){
-    		System.out.println("양수만 입력해주세요.");
+    	}else if (num < 0){
+    		System.out.println("양수만 입력하세요.");
     	}else {
     		System.out.println("홀수다");
     	}
@@ -439,21 +439,20 @@ public class ConditionPractice {
     	double c = num3 * 0.3;
     	double result = a+b+c + ch;
     	
-    	// ㅠㅠㅠㅠㅠㅠ fail일때 왜 왜왜왜왜왜 ㅠㅠㅠㅠ 계속 나머지도 출력이 되는걸까용 ㅠ
-    	
-    		if(num1 >= 0) {
-        		System.out.println("중간 고사 점수(20) : " + (num1*0.2));
-        	}if(num2 >= 0) {
-        		System.out.println("기말 고사 점수 (30) : " + (num2*0.3));
-        	}if(num3 >= 0) {
-        		System.out.println("과제 점수 (30) : " + (num3*0.3));
-        	}if(ch >= 0) {
-        		System.out.println("출석 점수 (20) : " + ch);
-        		System.out.println("총점 : " + result);
-        		
-        		if(result >= 70 && ch >= 14) {
-            		System.out.println("PASS");
-        	}else {
+    			if(result >= 70 && ch >= 14) {
+    			if(num1 >= 0) {
+            		System.out.println("중간 고사 점수(20) : " + (num1*0.2));
+            	}if(num2 >= 0) {
+            		System.out.println("기말 고사 점수 (30) : " + (num2*0.3));
+            	}if(num3 >= 0) {
+            		System.out.println("과제 점수 (30) : " + (num3*0.3));
+            	}if(ch >= 0) {
+            	System.out.println("출석 점수 (20) : " + ch);
+            	System.out.println("총점 : " + result);
+            	System.out.println("PASS");
+            	
+            	}
+    			} else {
     		
         		if (result < 70) {
         			System.out.println("FAIL" + "[점수 미달] (총점 " + result + ")");
@@ -462,10 +461,9 @@ public class ConditionPractice {
         			System.out.println("FAIL [출석 횟수 부족] (" + ch + "/" + 20 + ")");
         		}
         	}
-    	
+        		}
     	}
-    }
-}
+    
 
     	
     	

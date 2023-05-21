@@ -34,11 +34,9 @@ class LoopPractice {
     	int a = sc.nextInt();
     	
     	if(a < 1 || a > 100) {
-    	}else {
-    		for(int i = a; i >= 1; i--) {
+    	}for(int i = a; i >= 1; i--) {
     			System.out.println(i);
     		}
-    	}
     	}
  
     	
