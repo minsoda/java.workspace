@@ -115,8 +115,8 @@ public class B_Dimension {
 		B_Dimension b = new B_Dimension();
 //		b.method1();
 //		b.method2();
-//		b.method3();
-		b.method4();
+		b.method3();
+//		b.method4();
 		
 	}
 }

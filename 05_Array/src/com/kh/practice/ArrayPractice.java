@@ -5,38 +5,24 @@ import java.util.Scanner;
 
 public class ArrayPractice {
 	public static void main(String[] args) {
-		
-	
 		ArrayPractice ap = new ArrayPractice();
 //		ap.method1();
 //		ap.method2();
-		ap.method3();
+//		ap.method3();
 //		ap.method4();
-//		ap.method5();
+		ap.method5();
 	}
-
+	
 	/*
 	 * 길이가 5인 배열을 선언하고 과일 5개로 초기화 한 후 본인이 좋아하는 과일 하나를 출력하세요. (과일 5개는 뭐든지~)
 	 * 
 	 * */
 	public void method1() {
-		String[][] a = {{"바나나"}, {"딸기"}, {"키위"}, {"복숭아"}, {"사과"}};
-		String b = "바나나";
-		
-		for(int i=0; i<a.length; i++) {
-			for(int j = 0; j<a[i].length; j++) {
-				[i][j]++;
-		}
-			for(String[] i : a) {
-				for(String j : i) {
-					System.out.println(Arrays.toString(i));
-					
-				}
-			}
-		}
+		String [][] a = {{"바나나", "딸기", "사과", "키위", "복숭아"}};
+		String b = a[0][4];
+		System.out.println(b);
+	}
 	
-
-
 	/*
 	 * 사용자에게 배열의 길이와 배열의 크기 만큼 사용자한테 입력 받은 값으로 초기화 한 후
 	 * 각 입력 받은 값이 잘 들어갔는지 출력 후 저장된 값들의 합을 출력하세요.
@@ -53,19 +39,20 @@ public class ArrayPractice {
 	public void method2() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 : ");
-		int a = sc.nextInt();
+		int num = sc.nextInt();
 		
-		int[] b = new int[a];
+		int [] a = new int [num];
 		int sum = 0;
-		for(int i=0; i<b.length; i++) {
+	
+		for(int i=0; i<a.length; i++) {
 			System.out.print("배열 " + i + "번째 " + "인덱스에 넣을 값 : ");
-			b[i] = sc.nextInt();
-			sum += b[i];
-		
-		}	System.out.println(Arrays.toString(b));
-		System.out.println(sum);
+			a[i]=sc.nextInt();
+			sum += a[i];
 		}
-
+		System.out.println(Arrays.toString(a));
+		System.out.println(sum);
+	}
+	
 	
 	/*
 	 * 음식 메뉴는 자유롭게! 개수도 자유롭게! 배열 사용해서
@@ -74,19 +61,24 @@ public class ArrayPractice {
 	 * */
 	public void method3() {
 		Scanner sc = new Scanner(System.in);
-		String menu [][] = {{"치킨"}, {"맥주"}};
-		
-		System.out.println("메뉴를 입력하세요 : ");
+
+		String []menu = {"치킨","맥주"};
+		System.out.print("메뉴를 입력하세요 : ");
 		String a = sc.nextLine();
 		
-			for(int i=0; i < a.length(); i++)
-				if(a = ) {
+		boolean test = false;
+		for(String b : menu) {
+			if(b.equals(a)) {
+				test = true;
+				break;
+			}
+		}
+		if(test) {
 			System.out.println("배달 가능");
-			}else 
-				System.out.println("배달 불가능");
+		}else {
+			System.out.println("배달 불가능");
 		}
 	}
-}
 	
 	/*
 	 * 
@@ -99,8 +91,17 @@ public class ArrayPractice {
 	 * */
 	public void method4() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("주민등록번호  : ");
-		int a [] = []
+		
+		System.out.print("주민번호 : ");
+		String jm = sc.nextLine();
+		
+		char[]b = jm.toCharArray(); 
+		for(int i =8; i<b.length; i++) {
+		b[i] = '*';
+		}
+
+		String c = new String(b);
+		System.out.println(b);
 	}
 	
 	/*
@@ -112,9 +113,15 @@ public class ArrayPractice {
 	 * */
 	public void method5() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("단어 입력 : ");
 		
+		System.out.print("단어 입력 : ");
+		String word = sc.nextLine();
 		
+		String d = "";
+		for(int i =word.length()-1; i >= 0; i--) {
+			d += word.charAt(i);
+		}
+		System.out.println(d);
 	}
 	
 }

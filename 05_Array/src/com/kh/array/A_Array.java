@@ -123,23 +123,6 @@ public class A_Array {
 		}
 		System.out.printf("%.1f", sum / arr.length);
 
-//			String [] a = new String[3];
-//			a = 
-//			
-//			System.out.println("키 입력 > ");
-//			int a1 = Integer.parseInt(sc.nextLine());
-//			System.out.println("키 입력 > ");
-//			int a2 = Integer.parseInt(sc.nextLine());
-//			System.out.println("키 입력 > ");
-//			int a3 = Integer.parseInt(sc.nextLine());
-//			double av = (a1+a2+a3)/3;
-//			System.out.println(av);
-//				
-//			int b;
-//			for(int i=0; i<b.length; i++) {
-//				b[i] = a;
-//			}
-//			
 	}
 	// 배열의 복사
 
@@ -244,13 +227,13 @@ public class A_Array {
 		A_Array a = new A_Array();
 //		a.method1();
 //		a.method2();
-//		a.method3();
+		a.method3();
 //		a.method4();
 //		a.method5();
 //		a.method6();
 //		a.method7();
 //		a.method8();
-		a.method9();
+//		a.method9();
 
 	}
 
