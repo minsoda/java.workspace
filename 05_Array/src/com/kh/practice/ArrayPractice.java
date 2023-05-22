@@ -78,9 +78,9 @@ public class ArrayPractice {
 		
 		System.out.println("메뉴를 입력하세요 : ");
 		String a = sc.nextLine();
-	
-		if( ) {
+		
 			for(int i=0; i < a.length(); i++)
+				if(a = ) {
 			System.out.println("배달 가능");
 			}else 
 				System.out.println("배달 불가능");
