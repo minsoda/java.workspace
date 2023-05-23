@@ -114,24 +114,7 @@ public class D_While {
 	 * 
 	 * */
 	public void method5() {
-//		
-//		System.out.print("1과 100사이의 값 입력 > ");
-//		int answer = (int)(Math.random()*100) +1;
-//		int a = 0;
-//		
-//		while (true) {
-//			int b = sc.nextInt();
-//			a++;
-//			
-//			if(b < answer) {
-//				System.out.println("더 큰 수를 입력하세요.");
-//			} else if ( b > answer) {
-//				System.out.println("더 작은 수를 입력하세요.");
-//			} else {
-//				System.out.println(a + "번 만에 맞췄습니다.");
-//				break;
-//			}
-//		}
+
 		
 		int answer = (int)(Math.random()*100)+1;
 		int input = 0;

@@ -13,8 +13,8 @@ class LoopPractice {
 //		lp.method1();
 //		lp.method2();
 //		lp.method3();
-		lp.method4();
-//		lp.method5();
+//		lp.method4();
+		lp.method5();
 //		lp.method6();
 			
 	}
@@ -127,9 +127,22 @@ class LoopPractice {
      */
     public void method5() {
     		
-    	
+			    int a = 0;
+    			int b = (int) (Math.random()*6 )+1;
+    			int c = 0;
+    			
+    			while(true) {
+    			c++;
+    			
+    			for(int i = 1; i<11; i++) {
+    			if (b==???) {
+    			break;
+    			}
+    			System.out.println (b + " : " + c);
+    		}
+    			}
     }
-
+   
     /*
         사용자의 이름을 입력하고 컴퓨터와 가위바위보를 하세요. 
         컴퓨터가 가위인지 보인지 주먹인지는 랜덤한 수를 통해서 결정하도록 하고, 사용자에게는 직접 가위바위보를 받으세요.
