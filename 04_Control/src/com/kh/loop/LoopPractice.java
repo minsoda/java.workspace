@@ -1,5 +1,6 @@
 package com.kh.loop;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 class LoopPractice {
@@ -125,22 +126,17 @@ class LoopPractice {
         6 : 0
 
      */
+    
     public void method5() {
     		
-			    int a = 0;
-    			int b = (int) (Math.random()*6 )+1;
-    			int c = 0;
-    			
-    			while(true) {
-    			c++;
-    			
-    			for(int i = 1; i<11; i++) {
-    			if (b==???) {
-    			break;
-    			}
-    			System.out.println (b + " : " + c);
-    		}
-    			}
+    	int[] counts = new int[6];
+        for (int i = 0; i < 10; i++) {
+            int randomValue = (int) (Math.random() * 6) + 1;
+            counts[randomValue - 1]++;
+        }
+        for (int i = 0; i < 6; i++) {
+            System.out.println((i + 1) + " : " + counts[i]);
+        }
     }
    
     /*
@@ -170,17 +166,12 @@ class LoopPractice {
     	System.out.print("당신의 이름을 입력해주세요 : ");
     	String a = sc.nextLine();
     	
-    	System.out.print("가위바위보 : ");
-    	String game = sc.nextLine();
-    	
-    	System.out.print("컴퓨터 : ");
-    	String a = sc.nextLine();
-    	
-    	int random = (int)Math.random()*3;
-    			
-    	System.out.print("박신우 : " + game);
+    	String a1 = "가위";
+    	String a2 = "바위";
+    	String a3 = "보";
     	
     	
+    	System.out.println();
     	
     }
 

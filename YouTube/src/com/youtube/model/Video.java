@@ -20,30 +20,30 @@ public class Video {
 	 * */
 	
 	//영상 업로드 
-	public void upload() {
-		
+	public Video upload() {
+		return null;
 		
 	}
 	
 	// 영상 목록
-	public void viewList() {
-	
+	public Video[] viewList() {
+		return null;
 	}
 	
 	
 	//영상 1개 보기
-	public void viewVideo() {
-	
+	public Video viewVideo() {
+		return null;
 	}
 	
 	//동영상 수정
-	public void updateVideo() {
-	
+	public Video updateVideo() {
+		return null;
 	}
 	
 	//동영상 삭제
-	public void deleteViedeo() {
-		
+	public boolean deleteViedeo() {
+		return false;
 	}
 	
 }

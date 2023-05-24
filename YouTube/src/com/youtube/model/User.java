@@ -10,17 +10,27 @@ public class User {
 	public char gender;
 	
 	// 로그인
-	public void login() {}
-
-	// 회원가입
-	public void signUp() {}
+	public boolean login() {
+		return false;
+	}
 	
-	// 프로필 보기
-	public void viewProfile() {}
+	// 회원가입 
+	public boolean signUp() {
+		return false;
+	}
 	
-	// 프로필 수정
-	public void updateProfile() {}
+	// 프로필 보기, 바뀐데이터 때문에 User
+	public User viewProfile() {
+		return null;
+	}
+	
+	// 프로필 수정, 바뀐데이터 때문에 User
+	public User updateProfile() { 
+		return null;
+	}
 	
 	// 계정 삭제
-	public void deleteProfile() {}
+	public boolean deleteProfile() {
+		return false;
+	}
 }
