@@ -15,8 +15,8 @@ class LoopPractice {
 //		lp.method2();
 //		lp.method3();
 //		lp.method4();
-		lp.method5();
-//		lp.method6();
+//		lp.method5();
+		lp.method6();
 			
 	}
  
@@ -166,10 +166,14 @@ class LoopPractice {
     	System.out.print("당신의 이름을 입력해주세요 : ");
     	String a = sc.nextLine();
     	
-    	String a1 = "가위";
-    	String a2 = "바위";
-    	String a3 = "보";
+    	String b ="";
+    	String c ="";
+    	String d ="";
     	
+    	if(a == b) {
+    	} else if () {
+    		
+    	}
     	
     	System.out.println();
     	
