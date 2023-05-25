@@ -1,4 +1,4 @@
-package com.kh.example.practice3.run;
+package com.kh.example.practice3;
 
 import com.kh.example.practice3.model.Lotto;
 
