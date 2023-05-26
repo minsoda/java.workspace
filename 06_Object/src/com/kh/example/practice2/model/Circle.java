@@ -1,4 +1,4 @@
-package com.kh.exampl.practice2.model;
+package com.kh.example.practice2.model;
 
 public class Circle {
 	

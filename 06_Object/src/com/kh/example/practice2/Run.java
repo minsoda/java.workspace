@@ -1,6 +1,6 @@
-package com.kh.exampl.practice2;
+package com.kh.example.practice2;
 
-import com.kh.exampl.practice2.model.Circle;
+import com.kh.example.practice2.model.Circle;
 
 public class Run {
 	public static void main(String[] args) {
