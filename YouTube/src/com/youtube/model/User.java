@@ -9,6 +9,8 @@ public class User {
 	private String nickName;
 	private char gender;
 	
+	Video video;
+	
 	public User() {
 	}
 
@@ -74,7 +76,5 @@ public class User {
 		return "User [email=" + email + ", phone=" + phone + ", id=" + id + ", password=" + password + ", nickName="
 				+ nickName + ", gender=" + gender + "]";
 	}
-	
-	
 	
 }

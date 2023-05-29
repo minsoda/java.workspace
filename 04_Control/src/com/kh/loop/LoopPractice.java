@@ -47,12 +47,12 @@ class LoopPractice {
     	
     	int sum = 0;
     	int a = 1;
-    	int b = -2;
     	int count = 0;
     	
     	while (sum < 100) {
-    		sum += a;
-    		a = -a +1;
+    		if(a %2 == 0) {
+    			sum -=a;
+    		}
     		count++;
     	}
     	System.out.println(count);
