@@ -4,28 +4,31 @@ import com.youtube.model.User;
 
 public class UserController {
 
-	// 로그인
+	public class UserContreoller implements UserControllerImpl{
+
+		@Override
 		public boolean login() {
 			return false;
 		}
-		
-		// 회원가입 
+
+		@Override
 		public boolean signUp() {
 			return false;
 		}
-		
-		// 프로필 보기, 바뀐데이터 때문에 User
+
+		@Override
 		public User viewProfile() {
 			return null;
 		}
-		
-		// 프로필 수정, 바뀐데이터 때문에 User
-		public User updateProfile() { 
+
+		@Override
+		public User updateProfile() {
 			return null;
 		}
-		
-		// 계정 삭제
+
+		@Override
 		public boolean deleteProfile() {
 			return false;
 		}
+	}
 }
