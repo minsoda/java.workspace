@@ -8,7 +8,7 @@ public class step2 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int n = sc.nextInt();
+		int n = Integer.parseInt(sc.nextLine());
 		
 		int q1 = 0;
 		int q2 = 0;
@@ -33,10 +33,10 @@ public class step2 {
 			q4++;
 		}
 		}
-		System.out.println("Q1 : " + q1);
-		System.out.println("Q2 : " + q2);
-		System.out.println("Q3 : " + q3);
-		System.out.println("Q4 : " + q4);
-		System.out.println("AXIS : " + axis);
+		System.out.println("Q1 :" + q1);
+		System.out.println("Q2 :" + q2);
+		System.out.println("Q3 :" + q3);
+		System.out.println("Q4 :" + q4);
+		System.out.println("AXIS :" + axis);
 	}
 }
