@@ -5,7 +5,6 @@ import com.youtube.model.Video;
 
 public class VideoController {
 
-	public class VideoContreoller {
 
 		 Video[] videoList = new Video[5];
 		 int index = 0;
@@ -36,4 +35,4 @@ public class VideoController {
 
 		
 }
-}
+
