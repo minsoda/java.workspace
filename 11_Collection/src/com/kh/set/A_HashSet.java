@@ -73,7 +73,7 @@ public class A_HashSet {
 		
 		/*
 		 * Iterator
-		 * -컬렉션에 저장된 요소를 접근하는데 사용하는 인터페이스
+		 * - 컬렉션에 저장된 요소를 접근하는데 사용하는 인터페이스
 		 * - iterator()를 호출해서 Iterator를 구현한 객체를 얻어서 사용
 		 * */
 		Iterator<Person> it = set.iterator();
