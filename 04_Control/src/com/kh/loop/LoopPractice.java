@@ -12,11 +12,11 @@ class LoopPractice {
 		
 		LoopPractice lp = new LoopPractice();
 //		lp.method1();
-//		lp.method2();
+		lp.method2();
 //		lp.method3();
 //		lp.method4();
 //		lp.method5();
-		lp.method6();
+//		lp.method6();
 			
 	}
  
@@ -45,18 +45,19 @@ class LoopPractice {
     // 1+(-2)+3+(-4)+...과 같은 식으로 계속 더해나갔을 때, 몇까지 더해야 총합이 100 이상 되는지 출력하시오.
     public void method2() {
     	
+    	int a = 0;
     	int sum = 0;
-    	int a = 1;
     	int count = 0;
     	
-    	while (sum < 100) {
+    	for(int i=0; i<=a; i++) {
     		if(a %2 == 0) {
-    			sum -=a;
+    			sum -= a;
+    		}else if(a % 2 == 1) {
+    			sum += a;
     		}
     		count++;
     	}
-    	System.out.println(count);
-    		
+    	System.out.println(count);	
     	}
     	
 
