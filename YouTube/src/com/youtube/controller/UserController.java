@@ -2,9 +2,7 @@ package com.youtube.controller;
 
 import com.youtube.model.User;
 
-public class UserController {
-
-	public class UserContreoller {
+	public class UserController {
 
 		User user = null;
 		
@@ -16,7 +14,7 @@ public class UserController {
 		}
 
 	
-		public void signUp(User user) { //회원가임
+		public void signUp(User user) { //회원가입
 			this.user = user;
 		}
 
@@ -41,5 +39,6 @@ public class UserController {
 				user = null;
 			}
 		}
+	
 	}
-}
+

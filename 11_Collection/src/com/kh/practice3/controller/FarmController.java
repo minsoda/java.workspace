@@ -21,47 +21,25 @@ public class FarmController {
 		// 전달 받은 f가 hMap 안에 key로 존재하지 않을 때
 		// f와 amount를 각각 키와 값으로 저장 후 true 반환
 		
-		// 존재할 경우 false 반환
-		
-	
-		
+		if(!hMap.containsKey(f)) {
 			hMap.put(f, amount);
 			return true;
-
-		
-	
+		}
+			// 존재할 경우 false 반환
+	return false;
 	}
 	
-	@Override
-	public int hashCode() {
-		return Objects.hash(hMap, key, list);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		FarmController other = (FarmController) obj;
-		return Objects.equals(hMap, other.hMap) && Objects.equals(key, other.key) && Objects.equals(list, other.list);
-	}
-
 	public boolean removeKind(Farm f) {
 		
 		// 전달 받은 f가 hMap 안에 key로 존재할 때
 		// hMap에 f 삭제 후 true 반환
 		
 		// 존재하지 않을 경우 false 반환
-		Set<Entry<Farm, Integer>> entrySet = hMap.entrySet();
-		for(Entry<Farm, Integer> entry : entrySet) {
-			if(entry.getKey() != null) {
-				return hMap.remove(f, entrySet);
-				
-			}
+		if(hMap.containsKey(f)) {
+			hMap.containsKey(f);
+			return true;
 		}
+				
 		return false;
 	}
 	
@@ -71,12 +49,9 @@ public class FarmController {
 		// f와 amount 저장 후 true 반환
 		
 		// 존재하지 않을 경우 false 반환
-		Set<Entry<Farm, Integer>> entrySet = hMap.entrySet();
-		for(Entry<Farm, Integer> entry : entrySet) {
-			if(entry.getKey() != null) {
-				hMap.put(f, amount);
-				return true;
-			}
+		if(hMap.containsKey(f)) {
+			hMap.put(f, amount);
+			return true;
 		}
 		return false;
 	}
@@ -95,14 +70,11 @@ public class FarmController {
 		
 		// 존재하지 않으면 false 반환
 		
-		for(Farm farm : list) {
-			if(list.get(hMap.size()).equals(f)) {
-				list.add(f);
-				return 
-			}
+		if(hMap.containsKey(f) && hMap.get(f) > 0) {
+			list.add(f);
+			hMap.put(f, hMap.get(f)-1);
+			return true;
 		}
-		
-
 		return false;
 	}
 	
@@ -112,16 +84,11 @@ public class FarmController {
 		// list에 f 삭제, 그리고 hMap에 f 수량 1 증가, true 반환
 		
 		// 아니면 false 반환
-		int count = 0;
-		for(Farm farm : list) {
-			if(list.get(hMap.get(f)).equals(f)) {
-				list.remove(farm.getKind());
-				count++;
-				return hMap
-			}
+		if(list.contains(f)) {
+			list.remove(f);
+			hMap.put(f, hMap.get(f)+1);
+			return true;
 		}
-		
-		
 		return false;
 	}
 	

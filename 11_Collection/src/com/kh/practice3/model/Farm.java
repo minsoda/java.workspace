@@ -2,6 +2,8 @@ package com.kh.practice3.model;
 
 import java.util.Objects;
 
+import com.kh.practice3.controller.FarmController;
+
 public class Farm {
 
 	private String kind;
@@ -35,5 +37,23 @@ public class Farm {
 	public String toString() {
 		return "Farm [kind=" + kind + ", name=" + name + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(kind, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Farm other = (Farm) obj;
+		return Objects.equals(kind, other.kind) && Objects.equals(name, other.name);
+	}
+	
 	
 }
