@@ -15,6 +15,7 @@ public class FarmController {
 	private HashMap<Farm, Integer> hMap = new HashMap<>(); // 마트에서 농산물 저장용
 	private ArrayList<Farm> list = new ArrayList<>();      // 고객이 구매한 농산물 저장용
 	Set<Farm> key = hMap.keySet();
+	
 	public boolean addNewKind(Farm f, int amount) {
 		
 		//containsKey() : map에 key가 존재하는가
@@ -36,7 +37,7 @@ public class FarmController {
 		
 		// 존재하지 않을 경우 false 반환
 		if(hMap.containsKey(f)) {
-			hMap.containsKey(f);
+			hMap.remove(f);
 			return true;
 		}
 				

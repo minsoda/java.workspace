@@ -123,9 +123,7 @@ public class A_HashMap {
 		// 1. 홈런볼에 해당하는 과자 정보 출력 : Snack [flavor=초코, calorie=270]
 		
 		System.out.println(map.get("홈런볼"));
-//		
-//		Snack snack1= map.get("홈런볼");
-//		System.out.println(snack1);
+
 		
 		// 2. 후렌치파이의 맛 정보 출력 : 딸기
 		

@@ -1,0 +1,22 @@
+package project.impl;
+
+import project.model.User;
+
+public interface UserControllerImpl {
+
+	public boolean login();
+	
+	// 회원가입 
+	public boolean signUp();
+	
+	// 프로필 보기
+	public User viewProfile();
+	
+	// 프로필 수정
+	public User updateProfile();
+	
+	// 계정 삭제
+	public boolean deleteProfile();
+}
+
+
