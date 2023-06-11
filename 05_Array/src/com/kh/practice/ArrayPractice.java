@@ -9,8 +9,8 @@ public class ArrayPractice {
 //		ap.method1();
 //		ap.method2();
 //		ap.method3();
-//		ap.method4();
-		ap.method5();
+		ap.method4();
+//		ap.method5();
 	}
 	
 	/*
@@ -100,7 +100,6 @@ public class ArrayPractice {
 		b[i] = '*';
 		}
 
-		String c = new String(b);
 		System.out.println(b);
 	}
 	

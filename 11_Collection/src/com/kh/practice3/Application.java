@@ -40,7 +40,7 @@ public class Application {
 				adminMenu();
 				break;
 			case 2:
-					customerMenu();
+				customerMenu();
 				break;
 			case 9:
 				check = false;
@@ -99,6 +99,7 @@ public class Application {
 			
 		System.out.println("현재 KH마트 농산물 수량");
 		printFarm();
+		
 		System.out.println("****** 고객 메뉴 ******");
 		System.out.println("1. 농산물 사기");
 		System.out.println("2. 농산물 빼기");
@@ -147,7 +148,8 @@ public class Application {
 		System.out.print("추가할 수량 : ");
 		int amount = Integer.parseInt(sc.nextLine());
 		
-		boolean result = false;
+		boolean result = true;
+		
 		switch(select) {
 		case 1:
 			result = fc.addNewKind(new Fruit(name), amount);
@@ -195,16 +197,17 @@ public class Application {
 		System.out.print("삭제할 이름 : ");
 		String name = sc.nextLine();
 		
-		boolean result = false;
+		boolean result = true;
+		
 		switch(select) {
 		case 1:
-			result = fc.removeFarm(new Fruit(name));
+			result = fc.removeKind(new Fruit(name));
 			break;
 		case 2:
-			result = fc.removeFarm(new Vegetable(name));
+			result = fc.removeKind(new Vegetable(name));
 			break;
 		case 3:
-			result = fc.removeFarm(new Nut(name));
+			result = fc.removeKind(new Nut(name));
 			break;
 			default:
 				throw new Error();
@@ -213,11 +216,11 @@ public class Application {
 			System.out.println("농산물 삭제에 성공하였습니다.");
 		}else {
 		System.out.println("농산물 삭제에 실패하였습니다. 다시 입력해주세요.");
-		addNewKind();
+		removeKind();
 		}
 		} catch (Exception e) {
 			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
-			addNewKind();
+			removeKind();
 		}
 	}
 	
@@ -242,7 +245,7 @@ public class Application {
 		System.out.print("수정할 수량 : ");
 		int amount = Integer.parseInt(sc.nextLine());
 		
-		boolean result = false;
+		boolean result = true;
 		switch(select) {
 		case 1:
 			result = fc.changeAmount(new Fruit(name), amount);
@@ -278,7 +281,7 @@ public class Application {
 		            
 		while(it.hasNext()) {
 			Farm key = it.next();
-		System.out.printf("%s : %s(%d개)", key.getKind(), key.getName(), hMap.get(key));
+		System.out.printf("%s : %s(%d개)\n", key.getKind(), key.getName(), hMap.get(key));
 		}
 	}	
 	public void buyFarm() {
@@ -301,7 +304,7 @@ public class Application {
 			System.out.print("구매할 것 : ");
 			String name = sc.nextLine();
 
-			boolean result = false;
+			boolean result = true;
 			switch(select) {
 			case 1:
 				result = fc.buyFarm(new Fruit(name));
@@ -316,7 +319,7 @@ public class Application {
 					throw new Error();
 			}
 			
-			if(fc.buyFarm(null)) {
+			if(result) {
 				System.out.println("구매에 성공하였습니다.");
 			}else {
 				System.out.println("마트에 없는 물건이나 수량이 없습니다. 다시 입력해주세요.");
@@ -350,7 +353,8 @@ public class Application {
 		System.out.print("구매 취소할 것 : ");
 		String name = sc.nextLine();
 		
-		boolean result = false;
+		boolean result = true;
+		
 		switch(select) {
 		case 1:
 			result = fc.removeFarm(new Fruit(name));

@@ -12,8 +12,8 @@ class LoopPractice {
 		
 		LoopPractice lp = new LoopPractice();
 //		lp.method1();
-		lp.method2();
-//		lp.method3();
+//		lp.method2();
+		lp.method3();
 //		lp.method4();
 //		lp.method5();
 //		lp.method6();
@@ -71,23 +71,22 @@ class LoopPractice {
     */
     public void method3() {
     	
-    	System.out.print("문자열 : ");
-    	String a = sc.nextLine();
-    	
-    	System.out.print("문자 : ");
-    	char b = sc.next().charAt(0);
-    	
-    	
-    	int c = 0;
-    	
-    		for(int i = 0; i < a.length(); i++) {
-    		if(a.charAt(i) == b) {
-    			c++;
-    		}
-    		}
+    System.out.print("문자열 :  ");
+   String a = sc.nextLine();
+   
+   System.out.print("문자 : ");
+    char b= sc.nextLine().charAt(0);
+
+    int c= 0;
     
-    System.out.print(a + "안에 포함된 " + b + "개수 : " + c);
-   }
+    for(int i=0; i<a.length(); i++) {
+    	if(a.charAt(i) == b) {
+    		c++;
+    	}
+    }
+    
+    System.out.print(a + "안에 포함된 " + b + "개수 : " + c );
+    }
 
     /*
         0이 나올 때까지 숫자를 출력하시오. (random 사용! 1~10)

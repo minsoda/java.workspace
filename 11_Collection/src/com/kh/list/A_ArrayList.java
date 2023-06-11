@@ -25,7 +25,7 @@ public class A_ArrayList {
 		A_ArrayList a= new A_ArrayList();
 //		a.method1();
 //		a.method2();
-		a.method3();
+//		a.method3();
 	}
 
 	public void method1() {
@@ -116,7 +116,7 @@ public class A_ArrayList {
 		// 서울숲에 사는 사람들만 출력 
 	
 		for(Person p : list) {
-			if(p.getAddr().equals("서울숲")) {
+			if(p.getAddr().equals("서울숲") && p.getName().equals("") ) {
 				System.out.println(p);
 			}
 		}

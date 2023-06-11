@@ -18,7 +18,6 @@ public class SnackController {
 		// snack은 controller에서 만든 임시 데이터 창고
 		// viewSnack은 Application에서 데이터를 담은 임시 데이터 창고
 		String kind = viewSnack.getKind();
-		snack.setKind(viewSnack.getKind());
 		// == snack.setKind(viewSnack.getKind());
 		
 		snack.setName(viewSnack.getName());
