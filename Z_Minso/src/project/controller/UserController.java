@@ -1,44 +1,39 @@
 package project.controller;
 
+import java.util.HashMap;
+
 import project.model.User;
 
 public class UserController {
 
-		User user = null;
-		
-		public boolean login(String id, String password) { // 로그인
-			if(user != null && user.getId().equals(id) && user.getPassword().equals(password)){
+	private HashMap<String, User> map = new HashMap<>();
+	
+	public boolean joinUser(String id, User u) {
+		if(!map.containsKey(id)) {
+			map.put(id, u);
 			return true;
-			}
-			return false;
 		}
+		
+		return false;
+	}
+	
+	
+	public String login(String id, String password) {
+		
+		if(map.containsKey(id) && map.get(id).getPassword().equals(password)) {
+			return map.get(id).getName();
+		}
+		
+		return null;
+	}
 
 	
-		public void signUp(User user) { //회원가입
-			this.user = user;
+	public boolean changePassword(String id, String oldpw, String newPw) {
+		if(map.containsKey(id) && map.get(id).getPassword().equals(oldpw)) {
+			return true;
 		}
-
-		public User viewProfile() { //프로필 보기(로그인 된 경우)
-			if(login(user.getId(), user.getPassword())) {
-				return user;
-			}
-			return null;
-		}
-
-	
-		public User updateProfile(User  user) { // 프로필 수정(로그인 된 경우)
-			if(login(this.user.getId(),this.user.getPassword())) {
-				this.user = user;
-		}
-			return this.user;
-		}
-
-	
-		public void deleteProfile(String id) { // 계정 삭제
-			if(user.getId().equals(id)) {
-				user = null;
-			}
-		}
+		return false;
+	}
 	
 	}
 
