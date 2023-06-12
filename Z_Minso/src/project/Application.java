@@ -2,7 +2,10 @@ package project;
 
 import java.util.Scanner;
 
+import project.controller.ShoppingController;
 import project.controller.UserController;
+import project.model.Pants;
+import project.model.Top;
 import project.model.User;
 
 public class Application {
@@ -10,6 +13,7 @@ public class Application {
 
 		 private Scanner sc = new Scanner(System.in);
 		 private UserController uc = new UserController();
+		 private ShoppingController shc = new ShoppingController();
 		 
 		 public static void main(String[] args) {
 		
@@ -20,15 +24,16 @@ public class Application {
 
 		 public void mainMenu() {
 			 
-			 System.out.println("===== TTORY HOMEPAGE =====");
+			 System.out.println("=====♡  TTORY SHOP ♡ =====");
+			 System.out.println();
 			 
 			 boolean check = true;
 			 while(check) {
-				System.out.println("[ MAIN ]");
-				System.out.println("1. 회원가입");
-				System.out.println("2. 로그인");
-				System.out.println("3. 종료");
-				System.out.print("메뉴 번호 입력 : ");
+				System.out.println("1.  회원가입");
+				System.out.println("2.  로그인");
+				System.out.println("3.  종료");
+				System.out.println("4. 직원 메뉴 (직원 전용)");
+				System.out.println("메뉴 번호 입력 : ");
 				switch(Integer.parseInt(sc.nextLine())) {
 				case 1 :
 					joinUser();
@@ -40,6 +45,8 @@ public class Application {
 					check = false;
 					System.out.println("프로그램 종료");
 					break;
+				case 4 :
+					addNewShop();
 				}
 			 }
 			 
@@ -86,64 +93,61 @@ public class Application {
 			}
 			}
 		 
+		 public void addNewShop() {
+			System.out.println("1. 상의 / 2. 하의 / 3. 신발");
+			 System.out.println("추가할 종류의 번호 : ");
+			 int select = Integer.parseInt(sc.nextLine());
+			 System.out.println("추가할 이름 : ");
+			 String name = sc.nextLine();
+			 System.out.println("추가할 수량 : ");
+			int amount = Integer.parseInt(sc.nextLine());
+			 System.out.println("추가할 금액 : ");
+			 int price = Integer.parseInt(sc.nextLine());
+			 
+			 boolean result = true;
+			 
+			 switch(select) {
+			 case 1 : 
+				 result = shc.addNewShop(new Top(name, amount), amount, price);
+			break;
+			 case 2 :
+				 result = shc.addNewShop(new Pants(name,amount), amount, price);
+			 break;
+			 
+			 }
+		 }
+		 
 		 public void UserMenu() {
 			 
 			 boolean check  = true;
 			 while(check) {
 				 System.out.println("[ 회원 메뉴 ]");
-				 System.out.println("1. 비밀번호 바꾸기");
-				 System.out.println("2. 로그아웃");
+				 System.out.println("1. 로그아웃");
+				 System.out.println("2. ");
 				 
 				 switch(Integer.parseInt(sc.nextLine())) {
 				 case 1 :
-					 changePassword();
+					 check = false;
 					 break;
 				 case 2 :
-					 check = false;
 					 break;
 				 }
 				 
 			 }
-		 }
-		 
-		 public void changePassword() {
-			 System.out.print("ID : ");
-			 String id = sc.nextLine();
-
-			 System.out.print("PASSWORD : ");
-			 String oldPw = sc.nextLine();
-			 
-			 System.out.println("NEW PASSWORD : ");
-			 String newPw = sc.nextLine();
-			 
-			 if(uc.changePassword(id, oldPw, newPw)) {
-				 System.out.println("비밀번호 변경 성공!");
-				 ========
-			 }else {
-				 System.out.println("비밀번호 변결 실패! 다시 입력해주세요.");
-				 changePassword();
-			 }
-			 
-		 }
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
 		 
 }
+			
+		
+	
+			 
+			 
+			 
+			 
+		 }
+		 
+		 
+		 
+		 
+		 
+		 
+
