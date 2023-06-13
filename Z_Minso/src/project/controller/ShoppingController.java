@@ -9,12 +9,11 @@ import project.model.Shopping;
 public class ShoppingController {
 
 	
-	private HashMap<Shopping, Integer[]> hMap = new HashMap<>();
-	private Integer[] prices = hMap;
+	private HashMap<Shopping, Integer > hMap = new HashMap<>();
 	private ArrayList<Shopping> list = new ArrayList<>();
 	Set<Shopping>key = hMap.keySet();
 	
-	public boolean addNewShop(Shopping s, Integer[] amount) {
+	public boolean addNewShop(Shopping s, int amount) {
 		if(!hMap.containsKey(s)) {
 			hMap.put(s, amount);
 			return true;

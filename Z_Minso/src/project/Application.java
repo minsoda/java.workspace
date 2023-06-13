@@ -111,7 +111,7 @@ public class Application {
 				 result = shc.addNewShop(new Top(name, price), amount);
 			break;
 			 case 2 :
-				 result = shc.addNewShop(new Pants(name,amount), amount, price);
+				 result = shc.addNewShop(new Pants(name,price), amount);
 			 break;
 			 
 			 }

@@ -157,14 +157,13 @@ public class A_Date {
 			Calendar cal = Calendar.getInstance();
 			cal.set(Integer.parseInt(arr[0]), Integer.parseInt(arr[1])-1, Integer.parseInt(arr[2]));
 			Date d = new Date(cal.getTimeInMillis());
-			
-			
-			System.out.println("지금까지 " +  + " 지났습니다.");
+			long timeInMillis = cal.getTimeInMillis();
+			long day = ((((timeInMillis/100)/60)/60)/24);
+			System.out.println(bt + " : " +  +  " ㄴ요일 입니다.");
+			System.out.println("지금까지 " +day  + "일 지났습니다.");
 		
 			
 		}
-			}
-		}
-		
 	
-}
+		}
+		
