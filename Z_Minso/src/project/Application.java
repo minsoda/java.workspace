@@ -108,7 +108,7 @@ public class Application {
 			 
 			 switch(select) {
 			 case 1 : 
-				 result = shc.addNewShop(new Top(name, amount), amount, price);
+				 result = shc.addNewShop(new Top(name, price), amount);
 			break;
 			 case 2 :
 				 result = shc.addNewShop(new Pants(name,amount), amount, price);

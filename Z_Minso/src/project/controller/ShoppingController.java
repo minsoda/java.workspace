@@ -14,9 +14,9 @@ public class ShoppingController {
 	private ArrayList<Shopping> list = new ArrayList<>();
 	Set<Shopping>key = hMap.keySet();
 	
-	public boolean addNewShop(Shopping s, int amount, int price) {
+	public boolean addNewShop(Shopping s, Integer[] amount) {
 		if(!hMap.containsKey(s)) {
-			hMap.put(s, amount, price);
+			hMap.put(s, amount);
 			return true;
 		}
 		return false;
