@@ -5,6 +5,7 @@ import java.util.Scanner;
 import project.controller.ShoppingController;
 import project.controller.UserController;
 import project.model.Pants;
+import project.model.Shoes;
 import project.model.Top;
 import project.model.User;
 
@@ -25,15 +26,14 @@ public class Application {
 		 public void mainMenu() {
 			 
 			 System.out.println("=====♡  TTORY SHOP ♡ =====");
-			 System.out.println();
 			 
 			 boolean check = true;
 			 while(check) {
+				 System.out.println("메뉴 번호 입력 : ");
 				System.out.println("1.  회원가입");
 				System.out.println("2.  로그인");
 				System.out.println("3.  종료");
 				System.out.println("4. 직원 메뉴 (직원 전용)");
-				System.out.println("메뉴 번호 입력 : ");
 				switch(Integer.parseInt(sc.nextLine())) {
 				case 1 :
 					joinUser();
@@ -46,7 +46,7 @@ public class Application {
 					System.out.println("프로그램 종료");
 					break;
 				case 4 :
-					addNewShop();
+					adminMenu();
 				}
 			 }
 			 
@@ -91,8 +91,33 @@ public class Application {
 				System.out.println("틀린 아이디 또는 비밀번호 입니다. 다시 입력해주세요");
 				login();
 			}
-			}
+		 }
+			
 		 
+			public void adminMenu() {
+			 
+			 boolean check  = true;
+			 while(check) {
+				 System.out.println("[ 직원 메뉴 ]");
+				 System.out.println("메뉴 번호 선택 : ");
+				 System.out.println("1. 새 의류 추가");
+				 System.out.println("2. 의류 삭제");
+				 System.out.println("3. 수량 수정");
+				 System.out.println("4. 의류 목록");
+				 System.out.println("5. 메인으로 돌아가기");
+				 
+				 switch(Integer.parseInt(sc.nextLine())) {
+				 case 1 :
+					 break;
+				 case 2 :
+					 break;
+				 case 3 :
+					 break;
+					 
+				 }
+			 }
+			}
+			
 		 public void addNewShop() {
 			System.out.println("1. 상의 / 2. 하의 / 3. 신발");
 			 System.out.println("추가할 종류의 번호 : ");
@@ -113,37 +138,43 @@ public class Application {
 			 case 2 :
 				 result = shc.addNewShop(new Pants(name,price), amount);
 			 break;
+			 case 3 : 
+				 result = shc.addNewShop(new Shoes(name,price), amount);
+			 break;
+			 case 4 :
+				 System.out.println("메뉴 번호 입력 : ");
+				 mainMenu();
+				 break;
+			 }
 			 
+			 if(result) {
+				 System.out.println("의류가 추가 되었습니다.");
+			 } else {
+				 System.out.println("의류 추가에 실패하였습니다. 다시 입력해주세요.");
+				 addNewShop();
 			 }
 		 }
+		 
+			 }
 		 
 		 public void UserMenu() {
 			 
-			 boolean check  = true;
+			 boolean check = true;
+			 
 			 while(check) {
-				 System.out.println("[ 회원 메뉴 ]");
-				 System.out.println("1. 로그아웃");
-				 System.out.println("2. ");
-				 
-				 switch(Integer.parseInt(sc.nextLine())) {
-				 case 1 :
-					 check = false;
-					 break;
-				 case 2 :
-					 break;
-				 }
 				 
 			 }
+			 }
 		 
-}
-			
-		
-	
-			 
-			 
-			 
-			 
+		 
+		 
 		 }
+		 
+		 
+		 
+		 
+		 
+			 }
 		 
 		 
 		 
