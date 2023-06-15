@@ -58,7 +58,6 @@ public class FarmController {
 	}
 	
 	public HashMap<Farm, Integer> printFarm() {
-		
 		return hMap;
 	}
 	

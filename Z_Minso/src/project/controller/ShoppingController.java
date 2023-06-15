@@ -29,9 +29,21 @@ public class ShoppingController {
 			return false;
 	}
 	
+public boolean changeAmount(Shopping s, int amount) {
+		
+		// 전달 받은 f가 hMap 안에 key로 존재할 때 
+		// f와 amount 저장 후 true 반환
+		
+		// 존재하지 않을 경우 false 반환
+		if(hMap.containsKey(s)) {
+			hMap.put(s, amount);
+			return true;
+		}
+		return false;
+	}
 
-
-public HashMap<Shopping, Integer>printShopping(){
+public HashMap<Shopping, Integer> printShopping() {
+	
 	return hMap;
 }
 
