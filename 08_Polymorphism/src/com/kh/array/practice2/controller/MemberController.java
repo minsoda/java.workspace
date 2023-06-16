@@ -9,7 +9,8 @@ public class MemberController {
 	public int count = 0;
 //	mArr[count++] = new Member(id, name, password, email, gender, age);
 
-//	public void insertMember(String id, String name, String password, String email, int gendr, int age) {
+//	public void insertMember(String id, String name, String password, String email, int gender, int age) {
+	
 	public void insertMember(Member m) {
 	 //객체 배열에 객체 하나씩 추가한다고 생각
 	// count를 인덱스라고 생각

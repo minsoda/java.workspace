@@ -8,8 +8,7 @@ public class SnackController {
 	Snack snack = new Snack();
 	
 	// 생성자
-	public SnackController() {}
-	
+//	public SnackController() {}
 	
 	// 메서드
 	// 데이터를 setter를 이용해 저장하고 저장되었다는 결과를 반환하는 메서드

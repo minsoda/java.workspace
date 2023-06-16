@@ -10,6 +10,11 @@ public class Shopping {
 	
 	public Shopping() {}
 	
+	public Shopping(String kind, String name) {
+		this.kind = kind;
+		this.name = name;
+	}
+	
 	public Shopping(String kind, String name, int price) {
 		this.kind = kind;
 		this.name = name;

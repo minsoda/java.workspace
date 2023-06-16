@@ -9,17 +9,15 @@ public class EmployeeController {
 	public Employee findEmplyoeeByName(Employee[] ea, String name) {
 		
 		Employee emp = null;
-		
 			
 		for(Employee employee : ea) //for(int i = 0; i<ea.length; i++) 
 			{
 			if(employee.getName().equals(name)){
 		
-				return employee; // ea[i]
+				emp =  employee; // ea[i]
 			}
 		}
-		
-	return null;
+	return emp;
 	}
 	
 	// 연봉 계산 : engineer 인 경우 보너스가 있음

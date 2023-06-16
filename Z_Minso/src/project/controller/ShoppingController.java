@@ -22,54 +22,53 @@ public class ShoppingController {
 	}
 	
 	public boolean removeShop(Shopping s) {
-		if(hMap.containsKey(s)) {
-			hMap.remove(s);
-			return true;
+		
+//		System.out.println(hMap);
+//		System.out.println(s);
+//		System.out.println(hMap.containsKey(s));
+		
+		
+//		System.out.println(hMap);
+		
+		// 해시맵 사용한 forEach --> 제거는 되지만 return 사용 불가!
+//		hMap.forEach((key, value) -> {
+//			if(key.getKind().equals(s.getKind()) && key.getName().equals(s.getName())) {
+//				hMap.remove(key);
+//			}
+//		});
+		
+		//
+		for(Shopping key: hMap.keySet()) {
+			if(key.getKind().equals(s.getKind()) && key.getName().equals(s.getName())) {
+				hMap.remove(key);
+				return true;
+			}
 		}
-			return false;
+		return false;
+		
+//		if(hMap.containsKey(s)) {
+//			hMap.remove(s);
+//			return true;
+//		}
+//			return false;
 	}
 	
 public boolean changeAmount(Shopping s, int amount) {
 		
-		// 전달 받은 f가 hMap 안에 key로 존재할 때 
-		// f와 amount 저장 후 true 반환
-		
-		// 존재하지 않을 경우 false 반환
-		if(hMap.containsKey(s)) {
-			hMap.put(s, amount);
+	
+	for(Shopping key : hMap.keySet()) {
+		if(key.getKind().equals(s.getKind()) && key.getName().equals(s.getName())) {
+			hMap.put(s , amount);
 			return true;
 		}
-		return false;
 	}
+	return false;
+}
+
 
 public HashMap<Shopping, Integer> printShopping() {
 	
 	return hMap;
 }
-
-
-// ===== 고객 관련 ====
-
-public boolean buyShop(Shopping s) {
-	if(hMap.containsKey(s) && hMap.get(s) > 0) {
-		list.add(s);
-		hMap.put(s, hMap.get(s)-1);
-		return true;
-	}
-return false;
-
 }
 
-public boolean removeShops(Shopping s) {
-	if(list.contains(s)) {
-		list.remove(s);
-		hMap.put(s, hMap.get(s)+1);
-		return true;
-	}
-return false;
-}
-
-public ArrayList<Shopping> printBuyShopList(){
-	return list;
-}
-}
