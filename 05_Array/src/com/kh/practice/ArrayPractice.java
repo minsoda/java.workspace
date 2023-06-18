@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class ArrayPractice {
 	public static void main(String[] args) {
 		ArrayPractice ap = new ArrayPractice();
-//		ap.method1();
+		ap.method1();
 //		ap.method2();
 //		ap.method3();
-		ap.method4();
+//		ap.method4();
 //		ap.method5();
 	}
 	
@@ -18,10 +18,11 @@ public class ArrayPractice {
 	 * 
 	 * */
 	public void method1() {
-		String [][] a = {{"바나나", "딸기", "사과", "키위", "복숭아"}};
-		String b = a[0][4];
+		String [] a = new String [] {"바나나", "딸기", "사과", "키위", "복숭아"};
+		String b = a[1];
 		System.out.println(b);
-	}
+
+}
 	
 	/*
 	 * 사용자에게 배열의 길이와 배열의 크기 만큼 사용자한테 입력 받은 값으로 초기화 한 후

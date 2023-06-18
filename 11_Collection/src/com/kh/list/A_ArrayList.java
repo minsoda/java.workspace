@@ -25,7 +25,7 @@ public class A_ArrayList {
 		A_ArrayList a= new A_ArrayList();
 //		a.method1();
 //		a.method2();
-//		a.method3();
+		a.method3();
 	}
 
 	public void method1() {

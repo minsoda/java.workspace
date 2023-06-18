@@ -1,7 +1,8 @@
 package com.kh._abstract;
 
 	import com.kh._abstract.step1.BasketBall;
-	import com.kh._abstract.step1.Sports;
+import com.kh._abstract.step1.FootBall;
+import com.kh._abstract.step1.Sports;
 	import com.kh._abstract.step2.BulgogiPizza;
 	import com.kh._abstract.step2.PineApplePizza;
 	import com.kh._abstract.step2.Pizza;
@@ -41,7 +42,7 @@ package com.kh._abstract;
 			Sports[] sport = new Sports[2];
 			sport[0] = new BasketBall(5);
 			sport[1] = new BasketBall(11);
-			sport[0] = new BasketBall(5);
+			sport[0] = new FootBall(5);
 			
 			for(Sports s : sport) {
 				s.rule();
