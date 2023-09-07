@@ -9,7 +9,7 @@ import java.net.UnknownHostException;
  * 
  * 서버(Server)와 클라이언트(Client)
  * - 서비스를 제공하는 쪽이 서버, 제공받는 쪽이 클라이언트 
- * - 클라이언트가 요청(Request)하는 내용을 서버에서 처리하고 응답(Response)을 클라이언트로 zxcvbnm,./보낸다.
+ * - 클라이언트가 요청(Request)하는 내용을 서버에서 처리하고 응답(Response)을 클라이언트로 보낸다.
  * 
  * IP  주소
  * - 네트워크 상에서 컴퓨터를 식별하는 번호
